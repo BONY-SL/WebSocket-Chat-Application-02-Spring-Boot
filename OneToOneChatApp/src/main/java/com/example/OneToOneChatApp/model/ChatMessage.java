@@ -2,6 +2,7 @@ package com.example.OneToOneChatApp.model;
 
 
 import lombok.*;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Getter
@@ -11,4 +12,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Builder
 @Document
 public class ChatMessage {
+
+    @Id
+    private String id;
+    private String chatId;
+    private String sendId;
+    private String recipientId;
+    private String content;
+    private String timestamp;
 }
