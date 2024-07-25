@@ -20,7 +20,7 @@ public class UserController {
 
 
     @MessageMapping("/user.addUser")
-    @SendTo("/user/topic")
+    @SendTo("/user/public")
     public User addUser(@Payload User user){
 
         userService.saveUser(user);
@@ -28,8 +28,8 @@ public class UserController {
 
     }
 
-    @MessageMapping("/user.disConnectedUser")
-    @SendTo("/user/topic")
+    @MessageMapping("/user.disconnectUser")
+    @SendTo("/user/public")
     public User disConnect(@Payload User user){
 
         userService.disConnect(user);
