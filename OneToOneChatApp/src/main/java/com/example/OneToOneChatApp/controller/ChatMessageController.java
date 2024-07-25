@@ -32,7 +32,7 @@ public class ChatMessageController {
 
                 chatMessage.getRecipientId(),"queue/messages", ChatNotification.builder()
                         .id(saveMessage.getId())
-                        .senderId(saveMessage.getSendId())
+                        .senderId(saveMessage.getSenderId())
                         .recipientId(saveMessage.getRecipientId())
                         .content(saveMessage.getContent())
                         .build()

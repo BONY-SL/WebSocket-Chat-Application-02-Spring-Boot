@@ -17,7 +17,7 @@ public class ChatMessageService {
 
     public ChatMessage save(ChatMessage chatMessage){
 
-        var chatId = chatRoomService.getChatRoomId(chatMessage.getSendId(), chatMessage.getRecipientId(),
+        var chatId = chatRoomService.getChatRoomId(chatMessage.getSenderId(), chatMessage.getRecipientId(),
                 true
         ).orElseThrow();
 
